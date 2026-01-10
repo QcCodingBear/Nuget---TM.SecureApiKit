@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!-- Framework -->
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- Package Identity -->
+		<PackageId>TM.SecureApiKit</PackageId>
+		<Version>1.0.3</Version>
+		<Title>Secure and Structured Error Handling for ASP.NET Core</Title>
+		<Authors>Thierry Matteucci</Authors>
+		<Company>Thierry Matteucci Dev</Company>
+
+		<!-- Description -->
+		<Description>
+			A lightweight and configurable ASP.NET Core middleware that provides secure, standardized, and structured error responses.
+			Includes trace IDs, timestamps, automatic exception-to-status mapping, optional exception details, and support contact metadata.
+			Ideal for clean, production-ready API development.
+		</Description>
+
+		<!-- Licensing & URLs -->
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/QcCodingBear</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/QcCodingBear/TM.SecureApiKit</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+
+		<!-- NuGet Packaging -->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<IncludeSymbols>false</IncludeSymbols>
+		<IncludeSource>false</IncludeSource>
+
+		<!-- Tags for discoverability -->
+		<PackageTags>
+			aspnetcore;middleware;error-handling;api;exception;logging;secure;structured;traceid
+		</PackageTags>
+
+		<!-- Build -->
+		<PackAsTool>false</PackAsTool>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Dependencies -->
+		<PackageReference Include="Microsoft.Extensions.Options" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Include README.md in the NuGet package -->
+		<None Update="README.md">
+			<Pack>true</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
