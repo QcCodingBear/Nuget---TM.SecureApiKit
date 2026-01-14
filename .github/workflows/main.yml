@@ -30,4 +30,4 @@ jobs:
         run: sed -i "s|__TOKEN__|${{ secrets.GITHUB_TOKEN }}|g" nuget.config
 
       - name: Push to GitHub Packages
-        run: dotnet nuget push TM.SecureApiKit/bin/Release/*.nupkg --source "github" --skip-duplicate
+        run: dotnet nuget push TM.SecureApiKit/bin/Release/*.nupkg --source "github" --skip-duplicate --configfile nuget.config
