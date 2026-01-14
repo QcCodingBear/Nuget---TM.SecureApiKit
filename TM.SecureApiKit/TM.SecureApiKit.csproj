@@ -45,6 +45,11 @@
 		<!-- Dependencies -->
 		<PackageReference Include="Microsoft.Extensions.Options" Version="10.0.1" />
 	</ItemGroup>
+
+<ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+
 	<ItemGroup>
 		<!-- Include README.md in the NuGet package -->
 		<None Update="README.md">
