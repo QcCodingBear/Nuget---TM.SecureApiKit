@@ -27,7 +27,7 @@ jobs:
         run: dotnet nuget push TM.SecureApiKit/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
 
       - name: Add GitHub Packages source
-        run: dotnet nuget add source "https://nuget.pkg.github.com/QcCodingBear/index.json" --name "github" --username QcCodingBear --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
+        run: dotnet nuget update source "https://nuget.pkg.github.com/QcCodingBear/index.json" --name "github" --username QcCodingBear --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
 
       - name: Push to GitHub Packages
         run: dotnet nuget push TM.SecureApiKit/bin/Release/*.nupkg --source "github" --skip-duplicate
