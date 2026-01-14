@@ -3,7 +3,7 @@ name: Publish NuGet Package
 on:
   push:
     tags:
-      - 'v*'   # Ex: v1.0.4
+      - 'v*' 
 
 jobs:
   publish:
@@ -18,10 +18,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore TM.SecureApiKit/TM.SecureApiKit.csproj
 
-      - name: Build (generates the .nupkg automatically)
-        run: dotnet build --configuration Release
+      - name: Build (génère le .nupkg automatiquement)
+        run: dotnet build TM.SecureApiKit/TM.SecureApiKit.csproj --configuration Release
 
       - name: Push to NuGet
-        run: dotnet nuget push **/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push TM.SecureApiKit/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
