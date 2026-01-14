@@ -8,7 +8,7 @@
 
 		<!-- Package Identity -->
 		<PackageId>TM.SecureApiKit</PackageId>
-		<Version>1.0.6</Version>
+		<Version>1.0.7</Version>
 		<Title>Secure and Structured Error Handling for ASP.NET Core</Title>
 		<Authors>Thierry Matteucci</Authors>
 		<Company>Thierry Matteucci Dev</Company>
